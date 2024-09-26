@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            padding: 20px;
+            border: 2px solid black;
+            /* border-radius: 7px;  */
+            text-align: center;
+            width: 300px;
+            height: auto;
+             margin:  auto;
+            color: white;
+            background-color: rgb(42, 20, 244);
+            margin-top: 200px;
+        }
+        .user-box{
+            padding: 20px;
+            border: 2px solid black; 
+            /* border-radius: 7px;  */
+            height: 200px;
+            text-align: center;
+            width: 300px;
+             margin: auto;
+            background-color: white;
+        }
+        
+    button {
+    background-color:blue; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+body{
+    background-color: antiquewhite;
+}
+
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="box1" align="center"> 
+        <br>
+        <b><big>Login</big></b>
+    </div>
+    <form action="form.php">
+          
+            <div class="user-box">
+              
+                <b> Username:</b>  <input type="text" id="username" placeholder="Enter Username" name="username" required >
+
+            <br><br>
+           
+                <b>Password:</b>
+                <input type="password" id="password" placeholder="EnterPassword " name="password" required>
+            
+            <br><br><br><br>
+            <button type="button" onclick="submitForm()">Login</button>
+            <br><br><br><br><br>
+        </div>
+        </form>
+    
+    <script>
+        function submitForm() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === "" || password === "") {
+        alert("Please fill out all fields");
+    } else {
+        alert("Form submitted successfully!");
+    }
+}
+    </script>
+</body>
+</html>
